@@ -1,106 +1,27 @@
 
-# django + NextJS + Tailwind Boilerplate
+## Flow chart
+
+![App Screenshot](https://i.imgur.com/8OCzdVZ.png)
 
 
+## API Reference
 
-## About
+#### Get weather forecast/status
 
-A Django project boilerplate/template with lots of state of the art libraries and tools like:
-
-- django REST Framework
-- NextJS
-- TailwindCSS
-
-
-## Extra Libraries
-
-
-- django cors-headers
-- React Icons
-- Axios
-
-
-
-## Features
-
-- User Serializer is initialized 
-- User register endpoint initialized 
-- User Token endpoint initialized
-
-
-
-## Installation
-
-```bash
-    git clone https://github.com/shayan-cyber/dj-Next-Tailwind-boilerplate.git
-
-```
-```bash
-    cd dj-Next-Tailwind-boilerplate
+```http
+  POST http://127.0.0.1:8000/api/check-weather
 ```
 
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `body` | `dict` | **Required**. lat,long data |
 
+#### Get all past checks
 
-### `Backend`
-
-```bash
-  cd Backend
-```
-
-Make virtualenv
-
-```bash
-  python -m venv env
-```
-
-Activate virtualenv
-
-```bash
-  . env/Scripts/activate
-```
-
-Install dependencies
-
-```bash
-  pip install -r requirements.txt
-```
-
-Change Directory
-
-```bash
-  cd core
-```
-
-Runserver
-
-```bash
-  python manage.py runserver
+```http
+  GET http://127.0.0.1:8000/api/past-updates
 ```
 
 
 
 
-### `Frontend`
-
-```bash
-  cd Frontend
-```
-
-
-Change Directory
-
-```bash
-  cd next-failwind-frontend
-```
-
-Install dependencies
-
-```bash
-  npm i
-```
-
-Run dev
-
-```bash
-  npm run dev
-```
